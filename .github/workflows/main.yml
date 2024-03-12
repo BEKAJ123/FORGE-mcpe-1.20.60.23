@@ -1,1 +1,31 @@
-name: forge
+name: Forge1.20.60.23
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build addon
+      run: npm run build  # Предполагается, что у вас есть скрипт сборки в вашем package.json
+
+    - name: Archive addon
+      uses: actions/upload-artifact@v3
+      with:
+        name: addon
+        path: path/to/your/build/directory  # Укажите путь к директории, где находится ваш собранный аддон
