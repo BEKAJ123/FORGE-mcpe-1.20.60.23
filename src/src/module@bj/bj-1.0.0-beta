@@ -1,0 +1,13 @@
+{
+  "classes": [
+    {
+      "name": "lightEffect",
+      "methods": [
+        {
+          "name": "spawnLight",
+          "action": ""
+        }
+      ]
+    }
+  ]
+}
