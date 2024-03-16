@@ -2,10 +2,9 @@
   "classes": [
     {
       "name": "ForgeLight",
-      "methods": [
+      "properties": [
         {
-          "name": "lightAtLocation",
-          "action": "Определите действие, которое должен выполнить метод здесь"
+          "name": "lightAtLocation"
         }
       ]
     }
